@@ -20,17 +20,21 @@ public class Tri2Script : MonoBehaviour {
         {
             tri2On = true;
             audioSource.mute = false;
-            other.gameObject.transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);
         }
         else if (tri2On && other.gameObject.CompareTag("Triangle2"))
         {
             audioSource.mute = true;
             tri2On = false;
-            other.gameObject.transform.Rotate(new Vector3(0, 0, 0));
         }
     }
     // Update is called once per frame
     void Update () {
-		
+		if (tri2On)
+        {
+            transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);
+        } else if (!tri2On)
+        {
+            transform.Rotate(new Vector3(0, 0, 0));
+        }
 	}
 }
