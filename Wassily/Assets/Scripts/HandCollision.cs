@@ -6,7 +6,7 @@ public class HandCollision : MonoBehaviour {
 
     // Use this for initialization
     bool triOn = false;
-    bool gridOrb = false;
+    bool tri2On = false;
 
 	void Start () {
 		
@@ -17,26 +17,24 @@ public class HandCollision : MonoBehaviour {
         if ( !triOn && other.gameObject.CompareTag("Triangle1"))
         {
             triOn = true;
-            other.gameObject.transform.Rotate(new Vector3(1, 30, 45) * Time.deltaTime);
+            other.gameObject.transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);
         }
-
-        if (triOn && other.gameObject.CompareTag("Triangle1"))
+        else if (triOn && other.gameObject.CompareTag("Triangle1"))
         {
             triOn = false;
-            other.gameObject.transform.Rotate(new Vector3());
+            other.gameObject.transform.Rotate(new Vector3(0,0,0));
         }
 
-        if (!gridOrb && other.gameObject.CompareTag("gridsphere"))
+        if (!tri2On && other.gameObject.CompareTag("Triangle2"))
         {
-            gridOrb = true;
-            while (gridOrb)
-            {
-                float moveHorizontal = Input.GetAxis("Horizontal");
-                float moveVertical = Input.GetAxis("Vertical");
-                Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
-                movement =  new Vector3(0,0,0);
-
-            }
+            tri2On = true;
+            other.gameObject.transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);
+        }
+        else if (tri2On && other.gameObject.CompareTag("Triangle2"))
+        {
+            tri2On = false;
+            other.gameObject.transform.Rotate(new Vector3(0, 0, 0));
+        }
 
 
         }
