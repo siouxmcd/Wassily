@@ -131,8 +131,10 @@
     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderComponent.cs" />
     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSComponent.cs" />
     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarTouchController.cs" />
+    <Compile Include="Assets\Scripts\BatScript.cs" />
     <Compile Include="Assets\Scripts\HandCollision.cs" />
     <Compile Include="Assets\Scripts\PurpleTriangle.cs" />
+    <Compile Include="Assets\Scripts\SingleNote1.cs" />
     <Compile Include="Assets\Scripts\TouchController.cs" />
     <Compile Include="Assets\Scripts\Tri2Script.cs" />
   </ItemGroup>
